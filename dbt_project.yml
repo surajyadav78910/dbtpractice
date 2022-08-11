@@ -35,6 +35,9 @@ models:
   dbtproject1:
     # Applies to all files under models/example/
     stage:
-      materialized:table
-      database:DBT_DB
+      materialized: table
+      database: DBT_DB
+    publish:
+      materialized: table
+      database: DBT_DB
     

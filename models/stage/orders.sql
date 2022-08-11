@@ -1,5 +1,6 @@
 {{ config(
     schema= 'STAGE',
-    database= 'DBT_DB'
+    database= 'DBT_DB' 
 )}}
-SELECT * FROM "DBT_DB"."RAW_SOURCE"."ORDERS"
+
+SELECT * FROM {{ source('RAW_SOURCE', 'ORDERS') }}
